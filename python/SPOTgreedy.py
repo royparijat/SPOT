@@ -52,11 +52,11 @@ def SPOT_GreedySubsetSelection(C, targetMarginal, m):
                 targetMarginal.T))
         setValues[0][sizeS] = currObjectiveValue
         if sizeS == m-1 :
-            print("targetMarginal", targetMarginal);
-            gammaOpt = cp.sparse.csr_matrix((targetMarginal[0], (currMinSourceIndex[0], range(0, numX))), shape=(m, numX));
-            print("gammaOpt \n", gammaOpt);
-            currOptw = cp.sum(gammaOpt, axis=1).flatten();
-            print("currOptw \n", currOptw);
+            #print("targetMarginal", targetMarginal);
+            #gammaOpt = cp.sparse.csr_matrix((targetMarginal[0], (currMinSourceIndex[0], range(0, numX))), shape=(m, numX));
+            #print("gammaOpt \n", gammaOpt);
+            #currOptw = cp.sum(gammaOpt, axis=1).flatten();
+            #print("currOptw \n", currOptw);
         sizeS = sizeS + 1
     end = time.time()
     print("S : ", S)
